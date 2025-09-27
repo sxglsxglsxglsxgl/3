@@ -65,7 +65,10 @@ body {
 .safe-frame {
   display: flex;
   flex-direction: column;
-  contain: layout paint size;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  min-height: calc((var(--viewport-unit) * 100) - (var(--safe-top) + var(--safe-bottom)));
   z-index: 0;
 }
 
