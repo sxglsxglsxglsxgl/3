@@ -59,17 +59,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
 }
 
 .safe-frame {
-  position: fixed;
-  top: var(--safe-top);
-  right: var(--safe-right);
-  bottom: var(--safe-bottom);
-  left: var(--safe-left);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   contain: layout paint size;
   z-index: 0;
 }
@@ -98,8 +93,7 @@ body.is-menu-closing {
 .safe-frame .content {
   position: relative;
   flex: 1 1 auto;
-  height: 100%;
-  overflow: auto;
+  min-height: 100%;
   -webkit-overflow-scrolling: touch;
 }
 
